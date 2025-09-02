@@ -1,0 +1,37 @@
+:root{--bg:#0f172a;--panel:#111827;--text:#e5e7eb;--muted:#9ca3af;--accent:#22c55e;--danger:#ef4444;--focus:#38bdf8}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:radial-gradient(1200px 800px at 10% -10%,#1f2937 0%,transparent 60%),radial-gradient(1000px 700px at 110% -10%,#1e293b 0%,transparent 60%),var(--bg);color:var(--text);display:grid;place-items:center}
+.app{width:min(680px,92vw);padding:24px 20px}
+
+h1{margin:0 0 16px;font-size:28px;letter-spacing:.3px}
+.scoreboard{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.score{flex:1;background:var(--panel);padding:12px 14px;border-radius:12px;display:flex;align-items:center;justify-content:space-between}
+.score span{color:var(--muted)}
+#reset{margin-left:auto}
+
+.btn{cursor:pointer;border:1px solid #374151;background:#111827;color:var(--text);padding:8px 12px;border-radius:10px;transition:transform .06s ease, border-color .15s}
+.btn:hover{transform:translateY(-1px);border-color:#475569}
+.btn:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.btn-secondary{background:#0b1220}
+
+.choices{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:10px 0 18px}
+.choice{display:flex;flex-direction:column;gap:8px;align-items:center;justify-content:center;height:92px;font-size:34px;border:1px solid #374151;background:#0b1220;border-radius:14px;cursor:pointer;transition:transform .08s ease, border-color .15s}
+.choice span{font-size:12px;color:var(--muted)}
+.choice:hover{transform:translateY(-2px);border-color:#475569}
+.choice:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+
+.result{background:var(--panel);border-radius:12px;padding:14px}
+.picks{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:10px}
+.pick{height:56px;display:grid;place-items:center;background:#0b1220;border:1px solid #374151;border-radius:10px;font-size:22px}
+.label{display:block;color:var(--muted);font-size:12px;margin-bottom:6px}
+.outcome{margin:8px 0 0;font-size:18px}
+
+.rules{margin-top:14px}
+.rules[open]{padding:12px;background:#0b1220;border:1px solid #374151;border-radius:10px}
+.rules summary{cursor:pointer}
+
+@media (max-width:480px){
+  .choice{height:80px;font-size:28px}
+  .pick{height:48px}
+}

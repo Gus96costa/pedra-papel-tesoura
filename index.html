@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pedra · Papel · Tesoura</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Pedra · Papel · Tesoura</h1>
+
+      <section class="scoreboard" aria-live="polite">
+        <div class="score">
+          <span>Você</span>
+          <strong id="score-player">0</strong>
+        </div>
+        <div class="score">
+          <span>CPU</span>
+          <strong id="score-cpu">0</strong>
+        </div>
+        <button id="reset" class="btn btn-secondary" aria-label="Zerar placar">Zerar</button>
+      </section>
+
+      <section class="choices" aria-label="Escolhas">
+        <button class="choice" data-choice="pedra" aria-label="Escolher Pedra">🪨<span>Pedra</span></button>
+        <button class="choice" data-choice="papel" aria-label="Escolher Papel">📄<span>Papel</span></button>
+        <button class="choice" data-choice="tesoura" aria-label="Escolher Tesoura">✂️<span>Tesoura</span></button>
+      </section>
+
+      <section class="result" aria-live="polite">
+        <div class="picks">
+          <div>
+            <span class="label">Você</span>
+            <div id="player-pick" class="pick">—</div>
+          </div>
+          <div>
+            <span class="label">CPU</span>
+            <div id="cpu-pick" class="pick">—</div>
+          </div>
+        </div>
+        <h2 id="outcome" class="outcome">Faça sua jogada!</h2>
+      </section>
+
+      <details class="rules">
+        <summary>Regras</summary>
+        <ul>
+          <li>Pedra vence Tesoura</li>
+          <li>Tesoura vence Papel</li>
+          <li>Papel vence Pedra</li>
+        </ul>
+      </details>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
